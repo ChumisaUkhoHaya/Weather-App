@@ -8,13 +8,50 @@
     </head>
     <body>
         
-        <div class="card">
-        <div>
+    <div class="card">
+        <div class="search">
             <input type="text" placeholder="enter city name"
              spellcheck="false">
             <button><img src="images/search.png" alt=""></button>
         </div>
+        <div class="Weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">29°C</h1>
+            <h2 class="city">Sandton</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">38%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">18 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        </div>
+
+        <script>
+
+            const apiKey = "23c16bcd84637c085a883e93b1affc08";
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore";
+
+            async function checkWeather(){
+                const response = await fetch(apiUrl + '&appid=${apiKey}');
+                var data = await response.json();
+
+                console.log(data);
+
+                checkWeather();
+            }
+
+        </script>
 
     </body>
 </html>
