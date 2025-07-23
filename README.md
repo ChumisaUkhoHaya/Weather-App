@@ -1,8 +1,10 @@
 
-🌦️ Weather App
+🌦️ Weather App.
+
 A simple and responsive Weather App that allows users to search for any city and view real-time weather conditions using data from a public API (like OpenWeatherMap).
 
-🚀 Features
+🚀 Features.
+
 Live weather data (temperature, humidity, wind speed, etc.)
 
 City search functionality
